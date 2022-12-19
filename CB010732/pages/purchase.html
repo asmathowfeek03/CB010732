@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--favicon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="../icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../icons/favicon-16x16.png">
+    <link rel="manifest" href="../icons/site.webmanifest">
+    <link rel="mask-icon" href="../icons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <!--google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Antic+Didone&family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Antic+Didone&family=Cinzel&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Antic+Didone&family=Marcellus&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Antic+Didone&family=Marcellus&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Antic+Didone&family=Great+Vibes&family=Marcellus&display=swap" rel="stylesheet">
+
+    <title>Tea Talk</title>
+
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/purchase.css">
+
+</head>
+<body>
+    <main>
+        <section class="banner">
+            <header>
+                <div id="navbar" >
+                      <div class="logo_area">
+                            <div class="circle">
+                                <div class="logo"></div>
+                                    <div class="name">
+                                      <h1>TEA TALK - Since 2022 - Feel Every Sip - </h1>
+                                    </div>
+                            </div>
+                      </div>
+                      <div class="nav-links">
+                                <ul>
+                                    <li><a href="index.html" >Home</a></li>
+                                    <li><a href="plantation.html">Tea Plantation of Sri Lanka</a></li>
+                                    <li><a href="museum.html">Ceylon Tea Museum</a></li>
+                                    <li><a href="products.html">Products & Sales</a></li>
+                                    <li class="active"><a href="purchase.html">Purchase & Donate</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                </ul>
+                      </div>
+                      <div class="mob-menu">
+                        <span class="menu-icon-bar"></span>
+                        <span class="menu-icon-bar"></span>
+                        <span class="menu-icon-bar"></span>
+                      </div>
+                </div>
+            </header>
+
+            <div class="hero">
+                <div class="text_1">
+                    <h2>Purchase</h2>
+                    <h3>Tea Talk</h3>
+                    <p>A Full-Service Digital Organization</p>
+                    <p><span> - Since 2022- </span></p>
+                    <p><i>feel every sip</i></p>
+
+                  </div>
+                  <div class="img-wrapper">
+                    <img src="../images/66.png" alt="purchase_online" class="feature-img" >
+                </div>
+            </div>
+
+    </section>
+
+
+    <section class="about">
+        <h1 class="heading">
+            Find your <span>Favorite</span>
+        </h1>
+        <div class="row">
+            <div class="image">
+                <img src="../images/28.png" alt="Gift_box">
+            </div>
+            <div class="content">
+                <h2>We’ve got what you’re looking for!</h2>
+                <h3>Dear Tea Lovers,</h3>
+                <p> You can purchase gifts for your leaf-loving friends and family. </p>
+                <h4>Here<br> are<br> Some<br> Ideas<br>For<br>You!</h4>
+                <p>Purchase your merchandise </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="products">
+        <h1 class="heading">our <span>Products</span></h1>
+        <div class="btn">
+          <a onclick="loyalty()" class="btn_02">Check Loyalty</a>
+          <a onclick="clearOrders()" class="btn_01">Clear Orders</a>
+        </div>
+        <div class="box_container">
+          <div class="row1" style="display:none;" id="fav_item">
+              <div class="box">
+                <div class="icons">
+                    <br><br>
+                    <h2>Your Favourite Item</h2>
+                </div>
+                  <div class="images">
+                      <img  id="p_image" alt="fav_img" width="150px">
+                  </div>
+                  <div class="content1" >
+                      <h3 id="pName">Add Favourite Product</h3><br>
+                      <div class="stars">
+                          <img src="../icons/st.png" alt="star icon" >
+                          <img src="../icons/st.png" alt="star icon" >
+                          <img src="../icons/st.png" alt="star icon" >
+                          <img src="../icons/st.png" alt="star icon" >
+                          <img src="../icons/halfst.png" alt="half star icon">
+                      </div><br>
+                      <div class="price" id="price"></div> <br><br>
+
+                        <a onclick="orderFav()" class="btn_01">Order Favorits</a> <br><br>
+                  </div>
+              </div>
+          </div>
+          <section class="products" style="display:none;" id="display_curr_orders">
+              <h1 class="heading">Current <span>Orders</span></h1> <br><br>
+              <div class="container-my">
+                <div class="cards-my" id="cards-my">
+                </div>
+              </div>
+              <br><br>
+          </section>
+            <div class="row1">
+                <div class="box">
+                    <div class="icons">
+                        <img src="../icons/fav.png" alt="Favorite icon" onclick="addToFavourite(9)">
+                    </div>
+                    <div class="images">
+                        <img src="../images/31.png" alt="Tea Cup Set" width="200px">
+                    </div>
+                    <div class="content1">
+                        <h3>Tea Cup Set</h3><br>
+                        <div class="stars">
+                            <img src="../icons/st.png" alt="star icon" >
+                            <img src="../icons/st.png" alt="star icon" >
+                            <img src="../icons/st.png" alt="star icon" >
+                            <img src="../icons/st.png" alt="star icon" >
+                            <img src="../icons/halfst.png" alt="half star icon">
+                        </div><br>
+                        <div class="price">$15.99</div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icons">
+                        <img src="../icons/fav.png" alt="Favorite icon" onclick="addToFavourite(8)" >
+                    </div>
+                    <div class="images">
+                        <img src="../images/32.png" alt="Red Clay Tea Set" width="250px">
+                    </div>
+                    <div class="content1">
+                        <h3>Red Clay Tea Set</h3><br>
+                        <div class="stars">
+                            <img src="../icons/st.png" alt="star icon" >
+                            <img src="../icons/st.png" alt="star icon" >
+                            <img src="../icons/st.png" alt="star icon">
+                            <img src="../icons/halfst.png" alt="half star icon">
+                            <img src="../icons/halfst.png" alt="half star icon">
+                        </div><br>
+                        <div class="price">$17.99</div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icons">
+                        <img src="../icons/fav.png" alt="Favorite icon" onclick="addToFavourite(7)">
+                    </div>
+                    <div class="images">
+                        <img src="../images/33.png" alt="Copper Tea Kettle" width="200px">
+                    </div>
+                    <div class="content1">
+                        <h3>Copper Tea Kettle</h3><br>
+                        <div class="stars">
+                            <img src="../icons/st.png" alt="star icon" >
+                            <img src="../icons/st.png" alt="star icon" >
+                            <img src="../icons/st.png" alt="star icon" >
+                            <img src="../icons/st.png" alt="star icon" >
+                            <img src="../icons/st.png" alt="star icon">
+                        </div><br>
+                        <div class="price">$12.59</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row1">
+                <div class="box">
+                    <div class="icons">
+                        <img src="../icons/fav.png" alt="Favorite icon" onclick="addToFavourite(6)" >
+                    </div>
+                    <div class="images">
+                        <img src="../images/36.png" alt="Set of 4 Multicolor Teacups" width="250px">
+                    </div>
+                    <div class="content1">
+                        <h3>Set of 4 Multicolor Teacups</h3><br>
+                        <div class="stars">
+                            <img src="../icons/st.png" alt="star icon" >
+                            <img src="../icons/st.png" alt="star icon" >
+                            <img src="../icons/st.png" alt="star icon" >
+                            <img src="../icons/st.png" alt="star icon" >
+                            <img src="../icons/st.png" alt="star icon" >
+                        </div><br>
+                        <div class="price">$14.99 </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icons">
+                        <img src="../icons/fav.png" alt="Favorite icon" onclick="addToFavourite(5)">
+                    </div>
+                    <div class="images">
+                        <img src="../images/35.png" alt="Wooden Tea Spoon" width="200px">
+                    </div>
+                    <div class="content1">
+                        <h3>Wooden Tea Spoon</h3><br>
+                        <div class="stars">
+                            <img src="../icons/st.png" alt="star icon" >
+                            <img src="../icons/st.png" alt="star icon">
+                            <img src="../icons/halfst.png" alt="half star icon">
+                            <img src="../icons/halfst.png" alt="half star icon" >
+                            <img src="../icons/halfst.png" alt="half star icon" >
+                        </div><br>
+                        <div class="price">$4.99</div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icons">
+                        <img src="../icons/fav.png" alt="Favorite icon" onclick="addToFavourite(4)" >
+                    </div>
+                    <div class="images">
+                        <img src="../images/37.png" alt="Glass Teapot" width="280px">
+                    </div>
+                    <div class="content1">
+                        <h3>Glass Teapot</h3><br>
+                        <div class="stars">
+                            <img src="../icons/st.png" alt="star icon" >
+                            <img src="../icons/st.png" alt="star icon">
+                            <img src="../icons/st.png" alt="star icon" >
+                            <img src="../icons/st.png" alt="star icon" >
+                            <img src="../icons/halfst.png" alt="half star icon" >
+                        </div><br>
+                        <div class="price">$10.99 </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row1">
+                <div class="box">
+                    <div class="icons">
+                        <img src="../icons/fav.png" alt="Favorite icon" onclick="addToFavourite(3)">
+                    </div>
+                    <div class="images">
+                        <img src="../images/38.png" alt="Teapot, Milk Jar & Sugur Bowl" width="200px">
+                    </div>
+                    <div class="content1">
+                        <h3>Teapot, Milk Jar & Sugur Bowl</h3><br>
+                        <div class="stars">
+                            <img src="../icons/st.png" alt="star icon" >
+                            <img src="../icons/st.png" alt="star icon" >
+                            <img src="../icons/st.png" alt="star icon" >
+                            <img src="../icons/halfst.png" alt="half star icon">
+                            <img src="../icons/halfst.png" alt="half star icon" >
+                        </div><br>
+                        <div class="price">$18.99</div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icons">
+                        <img src="../icons/fav.png" alt="Favorite icon" onclick="addToFavourite(2)">
+                    </div>
+                    <div class="images">
+                        <img src="../images/34.png" alt="Antique Copper Teapot" width="200px">
+                    </div>
+                    <div class="content1">
+                        <h3>Antique Copper Teapot</h3><br>
+                        <div class="stars">
+                            <img src="../icons/st.png" alt="star icon" >
+                            <img src="../icons/st.png" alt="star icon" >
+                            <img src="../icons/st.png" alt="star icon" >
+                            <img src="../icons/st.png" alt="star icon" >
+                            <img src="../icons/halfst.png" alt="half star icon" >
+                        </div><br>
+                        <div class="price">$6.99</div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icons">
+                        <img src="../icons/fav.png" alt="Favorite icon" onclick="addToFavourite(1)">
+                    </div>
+                    <div class="images">
+                        <img src="../images/39.png" alt="2 Cat Tea Mug" width="200px">
+                    </div>
+                    <div class="content1">
+                        <h3>2 Cat Tea Mug</h3><br>
+                        <div class="stars">
+                            <img src="../icons/st.png" alt="star icon" >
+                            <img src="../icons/st.png" alt="star icon" >
+                            <img src="../icons/st.png" alt="star icon" >
+                            <img src="../icons/halfst.png" alt="half star icon" >
+                            <img src="../icons/halfst.png" alt="half star icon" >
+                        </div><br>
+                        <div class="price">$7.89</div>
+                    </div>
+                </div>
+            </div>
+            </div>
+    </section>
+
+
+    <section class="sec_4">
+            <div class="wrapper">
+
+                <div class="payment">
+                    <div class="payment-logo">
+                        <p>T</p>
+                    </div>
+                    <h2>Check Out</h2>
+                    <div class="form">
+                        <div class="card">
+                           <label class="label">Card Holder:</label>
+                           <input type="text" class="input" name="card_holder" placeholder="name" required>
+                        </div>
+                        <div class="card ">
+                            <label class="label">Card Number:</label>
+                            <div class="icn">
+                            <img src="../icons/c1.png" alt="credit card" width="70px"></label> <input type="radio">
+                            <img src="../icons/c2.png" alt="credit card" width="70px"></label> <input type="radio">
+                            <img src="../icons/c3.png" alt="credit card" width="70px"></label> <input type="radio">
+                            <img src="../icons/c4.png" alt="credit card" width="70px"></label> <input type="radio">
+                            </div>
+                            <input type="text" class="input" name="card_number" placeholder="card number" required>
+                        </div>
+                        <div class="card">
+                            <label class="label">Expiry Date:</label>
+                            <input type="text" class="input" name="expiry_date" placeholder="00 / 00" required>
+                        </div>
+                        <div class="card">
+                            <label class="label">CVC:</label>
+                            <input type="text" class="input" name="cvc" placeholder="000" required>
+
+                        </div>
+                    </div>
+                    <div class="butn">
+                        pay
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sec2">
+            <div class="col1">
+                <img src="../images/29.jpg" alt="purchasing" class="image1">
+                <img src="../images/81.jpg" alt="giving gifts" class="image2">
+            </div>
+            <div class="col2">
+                    <h1>make<br>your<br><span>Sri Lankan</span><br>tour a<br>memorable<br>one!</h1>
+            </div>
+
+        </section>
+
+        <section class="sec3">
+            <div class="new_box">
+                <div class="text2">
+                    <h1>Give Today For a Better Tomorrow!</h1>
+                    <p> Please donate to our Tea Talk general fund where we will allocate your donations to the most needed projects.</p><br><br>
+                    <p> Our mandate is to deliver high quality, accessible educational programmes, to children from the tea estates surrounding Nuwara Eliya region of Central Province, Sri Lanka.  </p>
+                </div>
+                <div class="img">
+                    <img src="../images/41.png" alt="donating" >
+                </div>
+            </div>
+            <div class="container">
+                <div class="hd">
+                    <h2>Payment Options</h2>
+                </div>
+                <div class="new_box2">
+                    <div class="cl1">
+                        <h3>ACCOUNT PAYEE CHEQUE</h3><br><br><br>
+                        <p>Deliver / Post to:<br>
+                            Head Office<br>
+                            No 72/3,<br> Linda Street,<br>Dehiwela,<br>Colombo 07.
+                           </p>
+                    </div>
+                    <div class="cl2">
+                        <h3>CASH</h3><br><br><br>
+                        <p>Deliver to:<br>
+                            Head Office<br>
+                           No 72/3,<br> Linda Street,<br>Dehiwela,<br>Colombo 07.
+                    </div>
+                    <div class="cl3">
+                        <h3>ONLINE TRANSFER</h3><br><br><br>
+                        <p>Account Name : THE Tea Talk Organization<br>
+                            Bank Name : Commercial Bank of
+                            Ceylon PLC,Elite Branch<br>
+                            Account No. : 10567788197<br>
+                            Bank Address : 07, Gregory’s Road, Colombo 07<br>
+                            Branch Code : 109<br>
+                            Bank Code : 0256<br>
+                            SWIFT Code : CCGHYLX</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="container">
+                <div class="sec aboutus">
+                        <h2>About Us</h2><br>
+                        <p>We are a full-service digital organization in Sri Lanka,Our vision is to boost the tea industry after the COVID-19 pandemic.</p><br><br>
+                            <ul class="sci">
+                                <li><a href="#"><img src="../icons/fb.png" alt="" ></a></li>
+                                <li><a href="#"><img src="../icons/twitter.png" alt=""></a></li>
+                                <li><a href="#"><img src="../icons/insta.png" alt=""></a></li>
+                                <li><a href="#"><img src="../icons/youtube.png" alt=""></a></li>
+                            </ul>
+                </div>
+                <div class="sec quickLinks">
+                        <h2>Quick Links</h2><br>
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li ><a href="plantation.html">Tea Plantation of Sri Lanka</a></li>
+                                <li><a href="museum.html">Ceylon Tea Museum</a></li>
+                                <li><a href="products.html">Products & Sales</a></li>
+                                <li class="active"><a href="purchase.html">Purchase & Donate</a></li>
+                            </ul>
+                </div>
+                <div class="sec contact">
+                       <h2>Contact Info</h2><br>
+                              <ul class="info">
+                                  <li>
+                                      <span><img src="../icons/map.png" alt="" width="20px" ></span>
+                                      <span>72/3, Linda Street,<br>Dehiwela,Colombo,<br>Sri Lanka.</span>
+                                  </li>
+                                  <li>
+                                      <span><img src="../icons/call.png" alt="" width="20px" ></span>
+                                      <p><a href="contact.html">011- 2345678</a><br>
+                                          <a href="contact.html">+94 73456789</a>
+                                      </p>
+                                  </li>
+                                  <li>
+                                      <span><img src="../icons/mail.jpg" alt="" width="20px" ></span>
+                                      <p><a href="contact.html"><i>teatalk@gmail.com</i></a></p>
+                                  </li>
+                              </ul>
+                </div>
+            </div>
+          </footer>
+                              <div class="copyrightText">
+                                <marquee direction="right"><p> Copyright &copy; Tea Talk 2022. All Rights Reserved.</p></marquee>
+                              </div>
+
+
+</main>
+<script src="../script/main.js"></script>
+<script src="../script/purchase.js"></script>
+</body>
+</html>
