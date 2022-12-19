@@ -1,0 +1,636 @@
+.banner{
+    height: 100vh;
+    width: 100%;
+    background:  radial-gradient(circle at bottom right, transparent 340px, rgba(0, 0, 0, 0.9)),
+    radial-gradient(circle at top left , transparent 340px, rgba(67, 126, 59, 0.5));
+    position: relative;   
+}
+
+.text_1 h2{ 
+    font-family: 'Cinzel', serif;
+    color:rgb(243, 191, 127);
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    text-transform: uppercase; 
+    letter-spacing: 10px;
+    animation:zoomin 1s linear ;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+}
+
+.feature-img{
+    height:65%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    animation:zoomin 1s linear ;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+}
+
+@keyframes zoomin {
+    0%{
+        transform: scale(0.5); 
+        visibility: visible; 
+    }
+    100%{
+        transform: scale(1);
+        visibility: visible;
+    }
+}
+
+.container{
+    max-width: 1166px;
+    margin: 0 auto;
+}
+
+.sec1{
+    position: relative;
+    padding: 80px 100px; 
+}
+
+.sec1 h3{
+    font-family: 'Antic Didone', serif; 
+    font-size: 50px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    line-height: 90px;
+}
+
+.sec1 p{
+    font-family: 'Roboto', sans-serif;
+    line-height: 25px;
+    font-size: 16px;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+}
+
+.sec1-inner{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.sec1 .text{
+    width: 47%
+}
+.sec1 .text-left{
+    text-align: right;  
+}
+
+.text .text-right{
+    text-align: left;
+}
+
+.sec1:before{
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to left, transparent, #fff, transparent);
+}
+.sec1:after{
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to left, transparent, #fff, transparent);
+}
+
+.sec3{
+    width: 100%;
+    height: 100vh;
+    background-image:linear-gradient(rgba(7, 7, 7, 0.9),rgba(0, 0, 0, 0.9)), url(../images/82.jpg);
+    background-position:center ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.lg{
+    width: 100%;
+   margin-left: 25%;
+}
+
+.box1,
+.box2,
+.box3{
+    width: 25%;
+    height: 300px;
+    background: radial-gradient(circle at top left, transparent 340px, rgba(122, 245, 149, 0.356)),
+     radial-gradient(circle at bottom right, transparent 340px, rgba(108, 243, 115, 0.438));
+     background-color: rgba(0, 0, 0, 0.7);
+     margin: 30px;
+     padding:20px;
+     text-align: center;
+
+    }
+
+.box1 h3,
+.box2 h3,
+.box3 h3{
+    font-family: 'Antic Didone', serif; 
+    font-size: 30px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    word-spacing: 7px;
+    
+}
+
+.box1 p,
+.box2 p,
+.box3 p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+}
+
+
+.sec2{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 30px 30px 50px 30px;
+   
+}
+
+.regions{
+    width: 100%;
+    margin-top: 50px ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.side1{
+    width: 40%;
+}
+
+.side2, .side3{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    margin-right: -150px; 
+}
+
+.side2 h3{
+    font-family: 'Antic Didone', serif; 
+    color:rgb(128, 85, 34);
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    word-spacing: 7px;
+    text-align: right;
+    margin-right: 150px;
+    margin-bottom: 40px;
+    margin-top: 30px;
+}
+
+.side2 p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    margin-right: 150px;
+    line-height: 25px;
+    text-align: right;
+}
+.side3 h3{
+    font-family: 'Antic Didone', serif; 
+    color:rgb(128, 85, 34);
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    word-spacing: 7px;
+    text-align: left;
+    margin-bottom: 40px;
+    margin-top: 30px;
+}
+.side3 p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    margin-right: 150px;
+    line-height: 25px;
+    text-align: left;
+}
+.sec4{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.img{
+    position: relative;
+    width: 300px;
+    height: 200px;
+    margin: 12px;
+    box-sizing: border-box;
+    display: inline-block; 
+}
+
+.img .imgbox{
+    position: relative;
+}
+
+.img .imgbox img{
+    width: 100%;
+    height: 200px;
+    transition: transform 2s;
+}
+
+.img:hover .imgbox img{
+    transform: scale(1.2);
+}
+.img .details{
+    position: absolute;
+    top: 150px;
+    left:50px ;
+    right:50px ;
+    bottom: 0px;
+    background:rgba(0, 0, 0, 0.7);
+    border-radius: 20px;
+    transform: scale(0);
+    transition: transform 0.5s;
+}
+.img:hover .details{
+     transform: scaleY(1);
+}
+.img .details h3{
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 2px;
+    font-size: 15px;
+    position: absolute;
+    top: 50%;
+    left: 22%;
+    transform: translateY(-50%);
+    text-align: center;
+    
+}
+
+.sec5{
+    width: 100%;
+    height: 100vh;
+}
+.sec5 .topic {
+    text-align: center;
+    padding-top: 50px;
+}
+.sec5 .topic h3{
+    font-family: 'Antic Didone', serif; 
+    color:rgb(255, 186, 102);
+    text-transform: uppercase;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    word-spacing: 7px;
+}
+.sec5 .new{
+    display: flex;
+    flex-direction: row;
+}
+.sec5 .new .lt{
+    width: 60%;
+}
+.sec5 .new .rt{
+    width: 20%;
+}
+.sec5 table.darkTable {
+    margin-left:150px;
+    margin-top: 100px;
+    border: 2px solid #000000;
+    background: linear-gradient(to bottom, #2e4934ad 0%, #17251a94 66%, #0000009c 100%);
+    width: 90%;
+    height: auto;
+    text-align: center;
+    border-collapse: collapse;
+  }
+  table.darkTable td , table.darkTable th {
+    border: 1px solid #4A4A4A;
+    padding: 4px 3px;
+  }
+  table.darkTable tbody td {
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 400;
+    letter-spacing: 1px;
+  }
+  table.darkTable tr:nth-child(even) {
+    background: #17251a ;
+  }
+  table.darkTable thead {
+    background: #000000;
+    border-bottom: 3px solid #000000;
+  }
+  table.darkTable thead th {
+    font-family: 'Antic Didone', serif; 
+    font-size: 25px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: #E6E6E6;
+    text-align: center;
+    border-left: 2px solid #4A4A4A;
+  }
+  table.darkTable thead th:first-child {
+    border-left: none;
+  }
+  
+  table.darkTable tfoot {
+    color: #E6E6E6;
+    background: #000000;
+    background: -moz-linear-gradient(top, #404040 0%, #191919 66%, #000000 100%);
+    background: -webkit-linear-gradient(top, #404040 0%, #191919 66%, #000000 100%);
+    background: linear-gradient(to bottom, #404040 0%, #191919 66%, #000000 100%);
+    border-top: 1px solid #4A4A4A;
+  }
+  table.darkTable tfoot td {
+    font-family: 'Antic Didone', serif; 
+    font-size: 16px;
+    letter-spacing: 2px;
+    font-weight: bold;
+
+  }
+
+
+
+/*
+*********  MEDIA QUERIES  *********
+*/
+@media only screen and (max-width: 1199px) {
+    .secnw{
+        height: auto;
+    }
+    .banner{
+        height: auto;
+        max-height: initial;
+        justify-content: flex-end;
+    }
+    .feature-img{
+        height: 62%;
+    }
+    .hero{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .hero .img-wrapper{
+        position: absolute;
+        bottom: 0;
+        height: 100%;
+        width: 100%;
+    }
+    
+    .hero  .text_1{
+        width: 100%;
+        padding: 160px 0 0 0;
+    }
+    .text_1 h2{
+        font-size: 36px;
+    }
+    .text_1 h3{
+        font-size: 32px;
+    }
+    .text_1 p{
+        font-size: 16px;
+    }
+    .sec1{
+        position: relative;
+        padding: 80px 15px;
+    }
+    .lg{
+        margin: 20px auto;
+        text-align: center;
+    }
+    .lg img{
+        max-width: 100%;
+        height: auto;
+    }
+    .sec3,
+    .sec4,
+    .sec5{
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 1023px) {
+    .hero  .text_1{
+        width: 100%;
+        padding: 160px 15px 250px 15px;
+    }
+    .hero .img-wrapper{
+        position: absolute;
+        bottom: 20px;
+        height: 220px;
+        width: 100%;
+    }
+    .feature-img{
+        position: relative;
+        height: auto;
+        max-height: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        display: block;
+    }
+    .sec1-inner{
+        flex-direction: column;
+        padding: 20px 40px;
+    }
+
+    .sec1 .text{
+        width: 90%;
+        margin: 20px auto;
+        text-align: center;
+    }
+    .sec1 .text-right{
+        text-align: left;
+    }
+
+    .sec2{
+        padding: 20px 40px;
+    }
+    .sec1 h3,
+    .sec2 h3,
+    .sec5 .topic h3{
+        font-size: 32px;
+        line-height: 54px;
+        text-align: center;
+        margin-top: 20px;
+        padding: 0 20px;
+    }
+
+    .sec2-inner{
+        flex-direction: column;
+    }
+
+    .sec2-inner .text{
+        margin: 15px auto !important;
+        width: 100%;
+    }
+    .sec2 .text-inner{
+        margin: 30px !important;
+        text-align: left;
+    }
+    .sec2 .text-inner:before{
+        display: none;
+    }
+    .sec2 .text-inner ul,
+    .sec2 .text-inner ol{
+        margin-left: 20%;
+        text-align: left;
+    }
+    .left-right-sec:nth-child(odd) .sec2-inner{
+        flex-direction: column-reverse;
+    }
+
+    .sec2-inner  img{
+        max-width: 100%;
+        height: auto;
+    }
+    .box1, .box2, .box3{
+        width: 90%;
+        max-width: 410px;
+    }
+    .box1 h3,
+    .box2 h3,
+    .box3 h3{
+        font-size: 24px;
+        margin-bottom: 30px;
+        margin-top: 30px;
+    }
+
+    .box1 p,
+    .box2 p,
+    .box3 p{
+        font-size: 17px;
+        line-height: 30px;
+    }
+
+    .regions{
+        flex-direction: column-reverse;
+        margin-top: 20px;
+    }
+    .regions:nth-child(odd){
+        flex-direction: column;
+    }
+    .side1, 
+    .side2, 
+    .side3{
+        margin: 0 auto;
+        width: 80%;
+        padding: 30px 0;
+        text-align: left;
+    }
+    .side1 h3, 
+    .side2 h3, 
+    .side3 h3{
+        margin: 0 auto;
+        padding: 30px 0;
+        text-align: left;
+    }
+    .side2 p{
+        margin-right: 0;
+        text-align: left;
+    }
+    .side1 p, 
+    .side2 p, 
+    .side3 p{
+        margin-right: 0;
+        text-align: left;
+    }
+    .sec4{
+        justify-content: center;
+    }
+    .sec5 .new{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .sec5 .new .rt{
+        width: 50%;
+        margin: 30px auto;
+    }
+    .sec5 .new .lt{
+        width: 100%;
+        margin: 0 auto;
+    }
+    .sec5 .new .rt img{
+        width: auto;
+        height: auto;
+        max-width: 100%;
+    }
+    .sec5 table.darkTable{
+        margin: 0 auto;
+        width: 90%;
+    }
+    table.darkTable tr th{
+        font-size: 17px;
+    }
+    table.darkTable tr td{
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .text_1 h2{
+        font-size: 22px;
+    }
+    .text_1 h3{
+        font-size: 20px;
+    }
+    .text_1 p{
+        font-size: 15px;
+    }
+    .sec1 .text-right{
+        text-align: center;
+    }
+
+    .sec2 .text-inner{
+        text-align: center;
+        margin: 20px auto !important; 
+    }
+    .sec1 h3,
+    .sec2 h3,
+    .sec5 .topic h3{
+        font-size: 24px;
+        line-height: 36px;
+    }
+    .sec2 p, .sec2 .text-inner li{
+        font-size: 15px;
+    }
+    .side1, 
+    .side2, 
+    .side3{
+        text-align: center;
+        padding: 20px 0;
+        width: 100%;
+    }
+    .side1 h3, 
+    .side2 h3, 
+    .side3 h3{
+        text-align: center;
+    }
+    .side1 p, 
+    .side2 p, 
+    .side3 p{
+        text-align: center;
+    }
+}

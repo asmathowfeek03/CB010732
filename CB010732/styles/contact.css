@@ -1,0 +1,338 @@
+.banner{
+    height: 100vh;
+    width: 100%;
+    background:  radial-gradient(circle at bottom right, transparent 340px, rgba(0, 0, 0, 0.9)),
+    radial-gradient(circle at top left , transparent 340px, rgba(29, 103, 163, 0.795));
+    position: relative;   
+}
+
+.text_1 h2{ 
+    font-family: 'Cinzel', serif;
+    color:rgb(243, 191, 127);
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    text-transform: uppercase; 
+    letter-spacing: 10px;
+    animation:zoomin 1s linear ;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+}
+
+.feature-img{
+    height:80%;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    top: 120px;
+    animation:zoomin 1s linear ;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+}
+
+@keyframes zoomin {
+    0%{
+        transform: scale(0.5); 
+        visibility: visible; 
+    }
+    100%{
+        transform: scale(1);
+        visibility: visible;
+    }
+}
+
+.sec1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: rgba(2, 2, 2, 0.4);
+}
+
+.sec1::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background:rgba(20, 20, 20, 0.322) ;
+}
+.container1{
+    position: relative;
+    min-width: 1100px;
+    min-height: 550px;
+    display: flex;
+    z-index: 1000;
+}
+
+.container1 .contactInfo{
+    position: absolute;
+    top: 10%;
+    width: 350px;
+    height:80%;
+    background:  radial-gradient(circle at bottom right, transparent 340px, rgba(0, 0, 0, 0.9)),
+    radial-gradient(circle at top left , transparent 340px, rgba(29, 103, 163, 0.795));
+    z-index: 1;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.9);
+    
+}
+
+.container1 .contactForm{
+    position: absolute;
+    padding: 70px 50px;
+    padding-left: 250px;
+    margin-left: 150px;
+    width: calc(100% - 150px);
+    height: 100%;
+    background:  radial-gradient(circle at bottom right, transparent 340px, rgba(0, 0, 0, 0.9)),
+    radial-gradient(circle at top left , transparent 340px, rgba(29, 103, 163, 0.795));
+    box-shadow: 0 50px 50px rgba(0, 0, 0, 0.7);
+}
+
+.container1 .contactForm h2{
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    font-weight: 800;
+
+}
+.container1 .contactForm .formBox{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 30px;
+}
+
+.container1 .contactForm .formBox .inputBox{
+    position: relative;
+    margin-bottom: 35px;
+}
+.container1 .contactForm .formBox .inputBox.w50{
+    width: 47%;
+
+}
+.container1 .contactForm .formBox .inputBox.w100{
+    width: 100%;
+
+}
+.container1 .contactForm .formBox .inputBox input,
+.container1 .contactForm .formBox .inputBox textarea{
+    width: 100%;
+    resize: none;
+    padding: 5px 0 ;
+    font-size: 18px;
+    font-weight: 300;
+    color: rgb(0, 0, 0);
+    background-color:rgba(119, 150, 216, 0.116) ;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #777;
+
+}
+
+.container1 .contactForm .formBox .inputBox textarea{
+    height: 120px;
+}
+
+.container1 .contactForm .formBox .inputBox  span{
+    position: absolute;
+    color: rgb(255, 249, 249);
+    letter-spacing: 1px;
+    left: 0;
+    padding: 5px 0;
+    pointer-events: none;
+    font-size: 18px;
+    font-weight: 300;
+    transition: 0.3s;
+}
+
+.container1 .contactForm .formBox .inputBox input:focus ~ span,
+.container1 .contactForm .formBox .inputBox input:valid ~ span,
+.container1 .contactForm .formBox .inputBox textarea:focus ~ span,
+.container1 .contactForm .formBox .inputBox textarea:valid ~ span
+{
+    transform: translateY(-30px);
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+}
+
+.container1 .contactForm .formBox .inputBox input[type="submit"]{
+    position: relative;
+    cursor: pointer;
+    background: rgba(255, 254, 251, 0.171);
+    border: none;
+    max-width: 150px;
+    padding: 12px;
+}
+
+.container1 .contactForm .formBox .inputBox input[type="submit"]:hover{
+    background: rgba(255, 255, 255, 0.589);
+    color: rgb(0, 0, 0);
+}
+
+
+
+/*
+*********  MEDIA QUERIES  *********
+*/
+@media only screen and (max-width: 1199px) {
+    .banner{
+        height: auto;
+        max-height: initial;
+        justify-content: flex-end;
+    }
+    .feature-img{
+        height: 62%;
+    }
+    .hero{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .hero .img-wrapper{
+        position: absolute;
+        bottom: 0;
+        height: 100%;
+        width: 100%;
+    }
+    .hero .img-wrapper img{
+        top: initial;
+    }
+    
+    .hero  .text_1{
+        width: 100%;
+        padding: 160px 0 0 0;
+    }
+    .text_1 h2{
+        font-size: 36px;
+    }
+    .text_1 h3{
+        font-size: 32px;
+    }
+    .text_1 p{
+        font-size: 16px;
+    }
+   .sec1{
+        height: auto;
+        width: 100%;
+        overflow: hidden;
+    }
+    .sec1 .container1{
+        flex-direction: column;
+        display: flex;
+        width: 100%;
+        min-width: initial;
+        height: auto;
+    }
+     
+    .contactInfo .contact{
+        width: 80%;
+        margin: 0 auto !important;
+        text-align: center;
+        position: relative;
+    }
+    .contactInfo .contact ul{
+        text-align: center;
+    }
+    .contactInfo .contact ul.info li{
+        display: block;
+    }
+    .contactInfo .contact ul.info li > span{
+        display: block;
+        line-height: 26px;
+    }
+    .contactInfo .aboutus ul.sci{
+        text-align: center;
+        display: block;
+    }
+    .contactInfo .aboutus ul.sci li{
+        display: inline-block;
+    }
+    
+    .container1 .contactInfo{
+        position: static;
+        width: 100%;
+        height: auto;
+        padding: 40px 0;
+        margin: 0 auto ;
+        text-align: center;
+    }
+   .container1 .contactForm{
+        position: relative;
+        width: 100%;
+        margin: 0 auto;
+        padding: 40px !important;
+    }
+    .contactForm h2{
+        text-align: center;
+    }
+    .formBox{
+        max-width: 540px;
+        margin: 10px auto;
+    }
+    .sec1::before{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1023px) {
+    .hero  .text_1{
+        width: 100%;
+        padding: 160px 15px 250px 15px;
+    }
+    .hero .img-wrapper{
+        position: absolute;
+        bottom: 20px;
+        height: 220px;
+        width: 100%;
+    }
+    .feature-img{
+        position: relative;
+        height: auto;
+        max-height: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        display: block;
+    }
+    .sec1-inner{
+        flex-direction: column;
+        padding: 20px 40px;
+    }
+
+    .sec1 .text{
+        width: 90%;
+        margin: 20px auto;
+        text-align: center;
+    }
+    .sec1 .text-right{
+        text-align: left;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .text_1 h2{
+        font-size: 22px;
+    }
+    .text_1 h3{
+        font-size: 20px;
+    }
+    .text_1 p{
+        font-size: 15px;
+    }
+    .sec1 .text-right{
+        text-align: center;
+    }
+    .container1 .contactForm .formBox .inputBox.w50{
+        width: 100%;
+    }
+}
